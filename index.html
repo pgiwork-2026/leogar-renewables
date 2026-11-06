@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leogar Renewable Private Limited | Embedded Systems, IoT, Drones, Training</title>
+<meta name="description" content="Leogar Renewable Private Limited: embedded systems, IoT hardware, drone manufacturing, civil works, industrial training and internships.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#14532d;--leaf:#5aa332;--sun:#f2b705;--mist:#f1f7ec;--ink:#17261c;--line:#d6e4cc;--bg:#fff}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font:17px/1.65 "Source Sans 3",system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;line-height:1.15;color:var(--forest)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:18px;font-weight:700}
+p.lead{max-width:62ch}
+/* nav */
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+nav img{height:44px;display:block}
+nav ul{display:flex;gap:26px;list-style:none;padding:0}
+nav a{text-decoration:none;font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--leaf)}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;background:var(--forest);color:#fff;text-decoration:none;font-weight:600}
+.btn:hover{background:var(--leaf)}
+.btn.alt{background:var(--sun);color:var(--ink)}
+.btn.alt:hover{background:#ffd23f}
+#menu{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:inherit}
+/* hero */
+.hero{background:var(--mist);position:relative;overflow:hidden;padding:96px 0 110px}
+.hero:before{content:"";position:absolute;right:-140px;top:-140px;width:460px;height:460px;border-radius:50%;background:var(--sun);opacity:.9}
+.hero:after{content:"";position:absolute;right:60px;bottom:-120px;width:300px;height:300px;border-radius:0 100% 0 100%;background:var(--leaf);opacity:.85}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{font-size:clamp(2.2rem,6vw,4.2rem);font-weight:800;max-width:15ch}
+.hero p{margin:22px 0 30px;font-size:1.15rem;max-width:52ch}
+.hero .tag{margin-top:34px;font-family:Sora,sans-serif;font-weight:600;color:var(--forest)}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+/* about */
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:56px}
+.vm{border-left:5px solid var(--sun);padding-left:22px;margin-bottom:28px}
+.vm h3{font-size:1.1rem;margin-bottom:6px}
+.vm ul{padding-left:20px}
+.founders{margin-top:64px}
+.founders h3{font-size:1.4rem;margin-bottom:26px}
+.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,280px));gap:40px}
+.founder .ph{position:relative;width:100%;aspect-ratio:1;border-radius:50% 50% 50% 8%;background:var(--mist);border:2px solid var(--line);overflow:hidden;display:grid;place-items:center;font:700 3rem Sora,sans-serif;color:var(--leaf)}
+.founder .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.founder h4{font:700 1.15rem Sora,sans-serif;margin-top:16px;color:var(--forest)}
+.founder span{color:#4b5f50}
+/* services */
+.services{background:var(--forest);color:#fff}
+.services h2{color:#fff}
+.srv{display:grid;grid-template-columns:70px 220px 1fr;gap:20px;align-items:baseline;padding:26px 0;border-top:1px solid rgba(255,255,255,.22)}
+.srv:last-child{border-bottom:1px solid rgba(255,255,255,.22)}
+.srv i{font-style:normal;width:46px;height:46px;border-radius:50%;background:var(--sun);color:var(--ink);display:grid;place-items:center;font-size:1.3rem;align-self:center}
+.srv h3{color:#fff;font-size:1.25rem}
+.srv p{color:#dcebd2}
+/* training */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;list-style:none;padding:0}
+.chips li{padding:9px 16px;border-radius:999px;background:var(--mist);border:1px solid var(--line);font-weight:600;color:var(--forest)}
+.checks{list-style:none;padding:0;margin-top:14px}
+.checks li{padding:9px 0 9px 34px;position:relative;border-bottom:1px solid var(--line)}
+.checks li:before{content:"";position:absolute;left:4px;top:18px;width:14px;height:8px;border-left:3px solid var(--leaf);border-bottom:3px solid var(--leaf);transform:rotate(-45deg)}
+.band{background:var(--mist)}
+/* why */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.why div{padding:22px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:-1px -1px 0 0;font-weight:600;color:var(--forest)}
+/* contact */
+.contact{background:var(--mist)}
+.cbox{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
+.cbox dl{margin:22px 0}
+.cbox dt{font-weight:600;color:var(--leaf);margin-top:14px}
+.cbox dd{font-size:1.15rem}
+.cbox dd a{text-decoration:none;border-bottom:2px solid var(--sun)}
+.enq{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 28px}
+.enq h3{margin-bottom:8px;font-size:1.1rem}
+footer{background:var(--ink);color:#c9d8cb;padding:44px 0;font-size:.95rem}
+footer .wrap{display:flex;gap:30px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+footer p{max-width:60ch}
+footer .logo{background:#fff;border-radius:10px;padding:8px 12px}
+footer img{height:38px;display:block}
+@media(max-width:820px){
+ section{padding:60px 0}
+ #menu{display:block}
+ nav ul{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;padding:14px 22px;gap:14px;border-bottom:1px solid var(--line)}
+ nav ul.open{display:flex}
+ .about,.cols,.cbox{grid-template-columns:1fr;gap:36px}
+ .srv{grid-template-columns:56px 1fr}
+ .srv p{grid-column:1/-1}
+ .fgrid{grid-template-columns:1fr 1fr;gap:18px}
+ .hero:before{width:300px;height:300px;right:-120px;top:-120px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap"><nav aria-label="Main">
+  <a href="#home" aria-label="Leogar Renewable home"><img src="images/logo.png" alt="Leogar Renewables Pvt Ltd"></a>
+  <button id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+  <ul id="links">
+   <li><a href="#about">About</a></li>
+   <li><a href="#services">Services</a></li>
+   <li><a href="#training">Training</a></li>
+   <li><a href="#internships">Internships</a></li>
+   <li><a href="#contact">Contact</a></li>
+  </ul>
+ </nav></div>
+</header>
+
+<main id="home">
+<section class="hero">
+ <div class="wrap">
+  <h1>Building Technology. Developing Skills. Creating Opportunities.</h1>
+  <p>Leogar Renewable Private Limited is a manufacturing and technology-driven company delivering innovative technical solutions and industry-oriented skill development.</p>
+  <div class="btns"><a class="btn" href="#services">Our services</a><a class="btn alt" href="#internships">Apply for internship</a></div>
+  <p class="tag">Innovating Technology. Empowering Skills. Building the Future.</p>
+ </div>
+</section>
+
+<section id="about">
+ <div class="wrap">
+  <div class="about">
+   <div>
+    <h2>Who we are</h2>
+    <p class="lead">Leogar Renewable Private Limited is a manufacturing and technology-based company committed to innovation, technical excellence and skill development.</p>
+    <p class="lead" style="margin-top:14px">Our company focuses on technology development, manufacturing activities and practical industrial training. We work with educational institutions to provide industry-oriented training programmes and internship opportunities that help students bridge the gap between academic learning and industrial requirements.</p>
+    <p class="lead" style="margin-top:14px">Through our technical expertise and practical learning approach, we aim to contribute to technological advancement and develop a skilled, industry-ready workforce.</p>
+   </div>
+   <div>
+    <div class="vm"><h3>Our vision</h3><p>To become a recognized technology and manufacturing company by delivering innovative solutions and developing technically skilled professionals.</p></div>
+    <div class="vm"><h3>Our mission</h3><ul>
+     <li>Deliver quality-driven manufacturing and technology solutions.</li>
+     <li>Promote innovation in emerging technologies.</li>
+     <li>Provide practical industrial training and internship opportunities.</li>
+     <li>Build strong relationships with educational institutions.</li>
+     <li>Develop industry-ready technical professionals.</li></ul></div>
+   </div>
+  </div>
+
+  <div class="founders">
+   
+  </div>
+ </div>
+</section>
+
+<section id="services" class="services">
+ <div class="wrap">
+  <h2>Our services</h2>
+  <div class="srv"><i aria-hidden="true">⚙</i><h3>Embedded Systems</h3><p>Design, development and implementation of embedded technology solutions using microcontrollers, electronic circuits and hardware integration.</p></div>
+  <div class="srv"><i aria-hidden="true">📡</i><h3>IoT Hardware Development</h3><p>Development of IoT-based hardware solutions, sensor integration, smart devices and connected technology applications.</p></div>
+  <div class="srv"><i aria-hidden="true">🛰</i><h3>Drone Manufacturing</h3><p>Focus on drone assembly, hardware integration, component development and technology applications related to unmanned aerial systems.</p></div>
+  <div class="srv"><i aria-hidden="true">🏗</i><h3>Civil Works</h3><p>Undertaking civil engineering-related works, infrastructure development and associated technical activities.</p></div>
+ </div>
+</section>
+
+<section id="training">
+ <div class="wrap cols">
+  <div>
+   <h2>Learn through practical experience</h2>
+   <p>We provide industry-oriented technical training programmes designed to help students gain practical exposure and develop technical skills.</p>
+   <p style="margin-top:14px">Our training emphasizes hands-on learning, technical demonstrations, practical assignments and exposure to industry-relevant technologies.</p>
+  </div>
+  <div>
+   <h3 style="font-size:1.15rem">Training domains</h3>
+   <ul class="chips">
+    <li>Embedded Systems</li><li>Internet of Things (IoT)</li><li>Drone Technology and Manufacturing</li><li>Hardware Development</li><li>Electronics and Circuit Design</li><li>Practical Engineering Applications</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section id="internships" class="band">
+ <div class="wrap cols">
+  <div>
+   <h2>Turn your knowledge into practical skills</h2>
+   <p>We offer internship opportunities for college students and aspiring candidates who want real-world technical experience. You work on practical assignments, understand industrial processes and explore emerging technologies.</p>
+   <p style="margin-top:26px"><a class="btn alt" href="mailto:leogarrenewableofficial@gmail.com?subject=Internship%20Enquiry">Enquire about internships</a></p>
+  </div>
+  <div>
+   <h3 style="font-size:1.15rem">Key benefits</h3>
+   <ul class="checks">
+    <li>Hands-on technical experience</li><li>Practical project exposure</li><li>Industry-oriented learning</li><li>Technical knowledge development</li><li>Professional skill enhancement</li><li>Exposure to manufacturing and technology processes</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section id="why">
+ <div class="wrap">
+  <h2>Why choose us</h2>
+  <div class="why">
+   <div>Industry-oriented technical training</div><div>Practical, hands-on learning</div><div>Focus on emerging technologies</div><div>Manufacturing and hardware development exposure</div><div>Internship opportunities for students</div><div>Engagement with educational institutions</div><div>Focus on technical and professional skill development</div>
+  </div>
+ </div>
+</section>
+
+<section id="contact" class="contact">
+ <div class="wrap cbox">
+  <div>
+   <h2>Let’s build technology and skills together</h2>
+   <p>Connect with us for manufacturing services, technical solutions, industrial training, internship opportunities and institutional engagement.</p>
+   <dl>
+    <dt>Company</dt><dd>Leogar Renewable Private Limited</dd>
+    <dt>Phone</dt><dd><a href="tel:+917358535505">+91 73585 35505</a></dd>
+    <dt>Email</dt><dd><a href="mailto:leogarrenewableofficial@gmail.com">leogarrenewableofficial@gmail.com</a></dd>
+   </dl>
+   <a class="btn" href="https://wa.me/917358535505" target="_blank" rel="noopener">Chat on WhatsApp</a>
+  </div>
+  <div class="enq">
+   <h3>Enquiry areas</h3>
+   <ul class="checks">
+    <li>Manufacturing and Technical Solutions</li><li>Industrial Training</li><li>Internship Opportunities</li><li>College Engagements</li><li>Business Enquiries</li>
+   </ul>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="logo"><img src="images/logo.png" alt="Leogar Renewables Pvt Ltd"></div>
+  <p>Leogar Renewable Private Limited is committed to technological innovation, manufacturing excellence and practical skill development through industry-oriented training and internship opportunities.<br>© 2026 Leogar Renewable Private Limited. All Rights Reserved.</p>
+ </div>
+</footer>
+<script>
+const b=document.getElementById('menu'),l=document.getElementById('links');
+b.addEventListener('click',()=>{const o=l.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+l.addEventListener('click',e=>{if(e.target.tagName==='A'){l.classList.remove('open');b.setAttribute('aria-expanded',false)}});
+</script>
+</body>
+</html>
